@@ -1,0 +1,341 @@
+body {
+  background-color: #0B0B0B;
+  color: white;
+  overflow-x: hidden;
+  font-family: 'Unica One', cursive;
+}
+
+#footer
+{
+  text-align: center;
+}
+
+.navbar {
+  padding: 3% 8% 5% 7%;
+}
+
+/* Looks */
+
+
+/* navbar */
+.navbar-brand {
+  color: white;
+  font-size: 2em;
+}
+
+.nav-link {
+  font-size: 1.5em;
+}
+
+.lander
+{
+
+  object-fit: contain;
+    z-index: -3;
+  -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  position: absolute;
+  width: 100%;
+
+}
+
+.ephassis {
+  font-family: 'Righteous', cursive;
+}
+p {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+
+.word {
+  position: absolute;
+  width: 220px;
+  opacity: 0;
+}
+
+.letter {
+  display: inline-block;
+  position: relative;
+  float: left;
+  transform: translateZ(25px);
+  transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+  transform: rotateX(90deg);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.letter.in {
+  transform: rotateX(0deg);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.wisteria {
+  color: #8e44ad;
+}
+
+.belize {
+  color: #2980b9;
+}
+
+.pomegranate {
+  color: #c0392b;
+}
+
+.green {
+  color: #16a085;
+}
+
+.midnight {
+  color: #2c3e50;
+}
+
+.text-1 {
+  padding: 8% 6% 15% 8.5%;
+  font-size: 1.7em;
+  opacity: 1;
+}
+
+.card-header {
+  font-size: 1.3em;
+}
+
+.cards {
+  padding: 5% 0% 5% 8%;
+}
+
+.separator {
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  border-color: #FFFFFF;
+  margin-bottom: 5%;
+}
+
+.sep-1 {
+  margin-top: 2%;
+  margin-bottom: 0;
+}
+
+.little-separator {
+  width: 30%;
+  text-align: center;
+  margin: auto;
+  border-color: #FFFFFF;
+}
+
+.center {
+  text-align: center;
+  width: 100%;
+}
+
+.card-header {
+  background-color: #962222;
+}
+
+.bigger {
+  font-size: 1.9em;
+  padding: 2% 2%;
+}
+
+.card {
+  border: none;
+  background-color: #171414;
+}
+
+.card-img-top {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.card-img-top {
+  transition: 0.3s;
+  filter: blur(3px);
+  /*		<----- required			*/
+}
+
+.card-img-top:hover {
+  filter: blur(0);
+  /*		<----- required			*/
+}
+
+.bigger-c {
+  font-size: 2.5em;
+  letter-spacing: .3em;
+}
+
+.container-c {
+  width: 100%;
+  text-align: center;
+}
+
+.csz-text {
+  padding: 5% 10% 5% 10%;
+  font-size: 1.1em;
+}
+
+.graphic-images {
+  display: flex;
+  justify-content: center;
+}
+
+.graphic-image {
+  width: 10%;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+.about-1 {
+  padding: 10% 10% 5% 10%;
+}
+
+.about-2 {
+  padding: 10% 10% 5% 0%;
+}
+
+.Text-contact
+{
+  text-align: center;
+}
+
+.contact-form
+{
+  padding: 2% 7% 2% 7%;
+}
+
+.icons li
+{
+  list-style: none;
+  padding: 2% 2% 0% 0%;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.icons i
+{
+    color: #962222;
+}
+
+.icons i:hover
+{
+    color: red;
+}
+
+
+.nav-scrolled {
+  --text: #333;
+  --text-inverse: #f4f4f4;
+  --background: #f4f4f4;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+}
+/* animation */
+.from-left {
+  grid-column: 2 / 3;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.from-right {
+  grid-column: 3 / 4;
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
+}
+
+.from-left,
+.from-right {
+  transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
+  transition: opacity 250ms ease-in, transform 400ms ease-in;
+  transition: opacity 250ms ease-in, transform 400ms ease-in,
+    -webkit-transform 400ms ease-in;
+  opacity: 0;
+}
+
+.from-left.appear,
+.from-right.appear {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
+
+::-webkit-scrollbar
+{
+  width: 0;
+}
+
+#scrollPath
+{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+#progressbar
+{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  background: #962222;
+}
+
+#progressbar::before
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #962222;
+}
+
+#progressbar::after
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #962222;
+}
+
+@media (max-width: 1028px) {
+  .nav-link {
+    font-size: 2em;
+
+    padding-top: 5%;
+  }
+
+  .profile-image
+  {
+    text-align: center;
+  }
+
+  .about-2 h3
+  {
+    text-align: center;
+  }
+
+  .about-2
+  {
+    padding: 2% 15% 2% 15%;
+  }
+}
